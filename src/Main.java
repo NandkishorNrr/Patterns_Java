@@ -4,7 +4,12 @@ public class Main {
 //        pattern2(5, 5);
 //        pattern3(4, 9);
 //        pattern4(10,10);
-        pattern5(7,7);
+//        pattern5(7,7);
+//        pattern6();
+//        pattern7();
+//        pattern8();
+//        patter9();
+        pattern10();
     }
 //    1) Program To Print Following Pattern X(filled left and right)
     /*
@@ -138,6 +143,149 @@ public class Main {
                 count--;
             else
                 count++;
+        }
+    }
+//    6) Program To Print Following Pattern
+           /*
+            1	2	3	4	5
+            16				6
+            15				7
+            14				8
+            13	12	11	10	9
+            */
+
+    public static void pattern6(){
+        int[][] mat = new int[5][5];
+        int topRow = 0;
+        int bottomRow = mat.length - 1;
+        int leftColumn = 0;
+        int rightColumn = mat[0].length - 1;
+        int count = 1;
+
+        for (int i = leftColumn; i < rightColumn ; i++) {
+            mat[topRow][i] = count++;
+        }
+        for (int i = topRow; i < bottomRow; i++) {
+            mat[i][rightColumn] = count++;
+        }
+        for (int i = rightColumn; i > leftColumn ; i--) {
+            mat[bottomRow][i] = count++;
+        }
+        for (int i = bottomRow; i > topRow; i--) {
+            mat[i][leftColumn] = count++;
+        }
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[0].length; j++) {
+                if (mat[i][j] == 0)
+                    System.out.print("\t");
+                else
+                    System.out.print(mat[i][j]+ "\t");
+            }
+            System.out.println();
+        }
+    }
+//    7) Program To Print Following Pattern
+    /*
+            12344321
+            123**321
+            12****21
+            1******1
+    */
+    public static void pattern7(){
+        int count = 1;
+        for (int i = 1; i <=4 ; i++) {
+            count = 1;
+            for (int j = 1; j <= 8; j++) {
+                if (5 - i < j && j < 4 + i)
+                    System.out.print("*");
+                else{
+                    if (j <= 4)
+                        System.out.print(count++);
+                    else
+                        System.out.print(--count);
+                }
+
+            }
+            System.out.println();
+        }
+    }
+//    8) Program To Print Following Pattern
+    /*
+            1	2	3	4	5	6	7	8	9	10
+            36	37	38	39	40	41	42	43	44	11
+            35	64	65	66	67	68	69	70	45	12
+            34	63	84	85	86	87	88	71	46	13
+            33	62	83	96	97	98	89	72	47	14
+            32	61	82	95	100	99	90	73	48	15
+            31	60	81	94	93	92	91	74	49	16
+            30	59	80	79	78	77	76	75	50	17
+            29	58	57	56	55	54	53	52	51	18
+            28	27	26	25	24	23	22	21	20	19
+    */
+    public static void pattern8(){
+        int[][] mat = new int[10][10];
+        int topRow = 0;
+        int bottomRow = mat.length - 1;
+        int leftColumn = 0;
+        int rightColumn = mat[0].length - 1;
+        int count = 1;
+
+        while (leftColumn < rightColumn){
+            for (int i = leftColumn; i < rightColumn; i++) {
+                mat[topRow][i] = count++;
+            }
+            for (int i = topRow; i < bottomRow; i++) {
+                mat[i][rightColumn] = count++;
+            }
+            for (int i = rightColumn--; i > leftColumn ; i--) {
+                mat[bottomRow][i] = count++;
+            }
+            for (int i = bottomRow--; i > topRow; i--) {
+                mat[i][leftColumn] = count++;
+            }
+            topRow++;
+            leftColumn++;
+        }
+
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[0].length; j++) {
+                System.out.print(mat[i][j]+ "\t");
+            }
+            System.out.println();
+        }
+    }
+//    9) Program To Print Following Pattern
+    public static void patter9(){
+        int n;
+        for (int i = 1; i <= 10; i++) {
+            n = 11 - i;
+            for (int j = 1; j <= i*2 -1 ; j++) {
+                if (j < i ){
+
+                    System.out.print(n++);
+                }
+                else {
+                    if (n == 10){
+                        System.out.print(0);
+                        n--;
+                        continue;
+                    }
+                    System.out.print(n--);
+                }
+            }
+            System.out.println();
+        }
+    }
+//    10) Program to Print Following Pattern
+
+
+    public static void pattern10(){
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (j <= i)
+                System.out.print("* ");
+            }
+            System.out.println();
         }
     }
 }
