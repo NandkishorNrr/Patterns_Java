@@ -9,7 +9,12 @@ public class Main {
 //        pattern7();
 //        pattern8();
 //        patter9();
-        pattern10();
+//        pattern10();
+//        pattern11();
+//        pattern12();
+//        pattern13();
+//        pattern14();
+        pattern15();
     }
 //    1) Program To Print Following Pattern X(filled left and right)
     /*
@@ -288,4 +293,97 @@ public class Main {
             System.out.println();
         }
     }
+//  11) Program to Print Following Pattern
+    /*
+    A
+    B B
+    C C C
+    D D D D
+    E E E E E
+    */
+    public static void pattern11(){
+        char ch = 64;
+        for (int i = 1; i <= 5; i++) {
+            ch++;
+            for (int j = 1; j <= 5; j++) {
+                if (j <= i)
+                System.out.print(ch);
+            }
+            System.out.println();
+        }
+    }
+//    12) Program to Print Following Pattern
+    /*
+            1 1 1 1 1 1 1 1 1 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1 1 1 1 1 1 1 1 1 1
+    */
+
+    public static void pattern12(){
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                if (i == 1 || i == 10 || j == 1 || j == 10)
+                    System.out.print(1 + " ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+//    13) Program to Print Following Pattern
+    /*
+            1 2 3 4 5
+            1 2 3 4
+            1 2 3
+            1 2
+            1
+    */
+
+    public static void pattern13(){
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 6 - i; j++) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+//    14) Program to Print Following Pattern
+    /*
+            *********
+            *******
+            *****
+            ***
+            *
+    */
+    public static void pattern14(){
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 10 - (i*2 - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+//    15) Program to Print Following Pattern
+//    >>> ?
+    public static void pattern15(){
+        int n = 0;
+        for (int i = 1; i <= 6 ; i++) {
+            n = 1;
+            for (int j = 1; j <= 11 ; j++) {
+                if ((6 - i < j && j < 6 + i))
+                    System.out.print(n + " ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+
 }

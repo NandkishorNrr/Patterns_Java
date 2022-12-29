@@ -80,7 +80,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>257</line>
+          <line>262</line>
           <properties class="Main" method="patter9">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
