@@ -14,7 +14,11 @@ public class Main {
 //        pattern12();
 //        pattern13();
 //        pattern14();
-        pattern15();
+//        pattern15();
+//        pattern16();
+//        pattern17();
+//        pattern18();
+        pattern19();
     }
 //    1) Program To Print Following Pattern X(filled left and right)
     /*
@@ -386,4 +390,78 @@ public class Main {
         }
     }
 
+//    16) Program to Print Following Pattern
+    /*
+            * * * * *
+            * * * *
+            * * *
+            * *
+            *
+*/
+    public static void pattern16(){
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (j <= 6 - i)
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+//    17) Program to Print Following Pattern
+    /*
+            1
+            2 3
+            4 5 6
+            7 8 9 10
+    */
+    public static void pattern17(){
+        int count = 1;
+        for (int i = 1; i <= 4; i++) {
+            for (int j = 1; j <= 4; j++) {
+                if (j <= i)
+                System.out.print(count++);
+            }
+            System.out.println();
+        }
+    }
+//    18) Program to Print Following Pattern
+    /*
+            1
+            1 2
+            1 2 3
+            1 2 3 4
+            1 2 3 4 5
+    */
+    public static void pattern18(){
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (j <= i)
+                    System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+//    19) Program to Print Following Pattern
+    /*
+                            *
+                          * * *
+                        * * * * *
+                      * * * * * * *
+                    * * * * * * * * *
+*/
+    public static void pattern19(){
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 9; j++) {
+                if (5 - i < j && j < i + 5)
+                    System.out.print("* ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+
+        }
+    }
 }
+
+
