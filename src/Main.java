@@ -18,7 +18,9 @@ public class Main {
 //        pattern16();
 //        pattern17();
 //        pattern18();
-        pattern19();
+//        pattern19();
+//        pattern20(5);
+        pattern21(5);
     }
 //    1) Program To Print Following Pattern X(filled left and right)
     /*
@@ -316,20 +318,6 @@ public class Main {
             System.out.println();
         }
     }
-//    12) Program to Print Following Pattern
-    /*
-            1 1 1 1 1 1 1 1 1 1
-            1                 1
-            1                 1
-            1                 1
-            1                 1
-            1                 1
-            1                 1
-            1                 1
-            1                 1
-            1 1 1 1 1 1 1 1 1 1
-    */
-
     public static void pattern12(){
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= 10; j++) {
@@ -460,6 +448,49 @@ public class Main {
             }
             System.out.println();
 
+        }
+    }
+    //    20) Program to Print Following Pattern
+    /*
+            1 1 1 1 1 1 1 1 1 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1                 1
+            1 1 1 1 1 1 1 1 1 1
+    */
+    public static void pattern20(int n){
+        for (int i = 0; i < n*2 - 1; i++) {
+            for (int j = 0; j < n*2 - 1; j++) {
+                if ((i == 0 || i == n*2 - 2) || (j == 0 || j == n*2 - 2))
+                    System.out.print(1 + " ");
+                else
+                    System.out.print("  ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void pattern21(int n){
+        int p = n;
+        for (int i = 0; i < n*2 - 1; i++) {
+            for (int j = 0; j < n*2 - 1; j++) {
+                if ((i == 0 || i == n*2 - 2) || (j == 0 || j == n*2 - 2))
+                    System.out.print(p + " ");
+                else if ((i == 1 || i == n*2 - 3) || (j == 1 || j == n*2 - 3))
+                    System.out.print(p - 1 + " ");
+                else if ((i == 2 || i == n*2 - 4) || (j == 2 || j == n*2 - 4))
+                    System.out.print(p - 2 + " ");
+                else if ((i == 3 || i == n*2 - 5) || (j == 3 || j == n*2 - 5))
+                    System.out.print(p - 3 + " ");
+                else if ((i == 4 || i == n*2 - 6) || (j == 4 || j == n*2 - 6))
+                    System.out.print(p - 4 + " ");
+            }
+            System.out.println();
         }
     }
 }
